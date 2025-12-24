@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ if eq site.Params.hero.layout "hero2" }}
+{{ partial "hero2.html" . }}
+{{ else }}
+{{ partial "hero.html" . }}
+{{ end }}
+{{ partial "about.html" . }}
+{{ partial "services.html" . }}
+{{ partial "gallery.html" . }}
+{{ partial "testimonials.html" . }}
+{{ partial "contact.html" . }}
+{{ end }}

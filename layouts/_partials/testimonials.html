@@ -1,0 +1,48 @@
+<section id="testimonials" class="py-20 bg-gray-50 overflow-hidden">
+    <div class="container mx-auto px-4 text-center relative max-w-6xl">
+        <!-- Decorative Paws Left -->
+        <div class="absolute top-20 -left-12 z-0 opacity-20 text-paw-icon hidden lg:block transform -rotate-12">
+            <div class="absolute top-0 left-0">
+                {{ partial "paw.html" (dict "class" "size-paw-icon transform rotate-12") }}
+            </div>
+            <div class="absolute top-16 left-12">
+                {{ partial "paw.html" (dict "class" "size-paw-icon transform -rotate-12") }}
+            </div>
+            <div class="absolute top-32 left-4">
+                {{ partial "paw.html" (dict "class" "size-paw-icon transform rotate-12") }}
+            </div>
+        </div>
+        <!-- Decorative Paws Right -->
+        <div class="absolute bottom-20 -right-12 z-0 opacity-20 text-paw-icon hidden lg:block transform rotate-12">
+            <div class="absolute top-0 right-0">
+                {{ partial "paw.html" (dict "class" "size-paw-icon transform -rotate-12") }}
+            </div>
+            <div class="absolute top-16 right-12">
+                {{ partial "paw.html" (dict "class" "size-paw-icon transform rotate-12") }}
+            </div>
+        </div>
+
+        <h2 class="text-3xl lg:text-4xl font-heading font-bold text-blue-900 mb-12 relative z-10">Testimonials</h2>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
+            {{ range $index, $element := site.Data.testimonials }}
+            {{ $bgColor := "bg-blue-600" }}
+            {{ $textColor := "text-white" }}
+            {{ if eq (mod $index 2) 1 }}
+            {{ $bgColor = "bg-yellow-400" }}
+            {{ $textColor = "text-blue-900" }}
+            {{ end }}
+
+            <div class="relative">
+                <div class="{{ $bgColor }} {{ $textColor }} p-8 rounded-3xl shadow-lg relative z-10 text-left">
+                    <p class="mb-4 text-lg font-medium leading-relaxed">"{{ .quote }}"</p>
+                    <div class="font-bold text-right py-2 border-t border-white/20">- {{ .author }}</div>
+
+                    <!-- Chat bubble tail -->
+                    <div class="absolute bottom-[-10px] left-8 w-6 h-6 {{ $bgColor }} transform rotate-45"></div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

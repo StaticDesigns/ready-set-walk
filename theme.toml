@@ -1,0 +1,12 @@
+name = "Ready Set Walk"
+license = "MIT"
+licenselink = "https://github.com/StaticDesigns/ready-set-walk/blob/main/LICENSE"
+description = "A vibrant, configurable Hugo theme designed for teen dog walkers and pet services."
+homepage = "https://github.com/StaticDesigns/ready-set-walk"
+tags = ["business", "service", "dog", "tailwind", "postcss"]
+features = ["tailwindcss", "postcss", "formspree", "pricing"]
+min_version = "0.150.0"
+
+[author]
+  name = "StaticDesigns"
+  homepage = "https://github.com/StaticDesigns/ready-set-walk"

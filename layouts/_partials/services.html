@@ -1,0 +1,55 @@
+<section id="services" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl lg:text-4xl font-heading font-bold text-blue-900 mb-12">Let's Get Moving!</h2>
+
+        <div class="relative max-w-6xl mx-auto">
+            <!-- Decorative Paws Top Left -->
+            <div class="absolute -top-16 -left-8 z-0 opacity-20 text-paw-icon hidden lg:block transform -rotate-12">
+                <div class="absolute top-0 left-0">
+                    {{ partial "paw.html" (dict "class" "size-paw-icon transform rotate-12") }}
+                </div>
+                <div class="absolute top-16 left-12">
+                    {{ partial "paw.html" (dict "class" "size-paw-icon transform -rotate-12") }}
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                {{ range site.Data.services }}
+                <div
+                    class="bg-{{ .color }}-500 text-white rounded-3xl p-8 shadow-xl transform hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group z-10">
+
+
+                    {{ if .icon }}
+                    <div
+                        class="bg-white/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                        {{ partial "image.html" (dict "src" .icon "alt" .name "class" "w-15 h-15 object-contain" "size"
+                        "100x webp") }}
+                    </div>
+                    {{ end }}
+
+                    <h3 class="text-2xl font-heading font-bold mb-2">{{ .name }}</h3>
+                    <div class="text-xl font-medium mb-4">({{ .duration }})</div>
+
+                    <div class="text-5xl font-heading font-bold mb-6 flex justify-center items-start">
+                        <span class="text-2xl mt-2">$</span>{{ .price }}
+                    </div>
+
+                    <p class="text-white leading-relaxed mb-6">{{ .description }}</p>
+                </div>
+                {{ end }}
+            </div>
+            <!-- Decorative Paws Bottom Right -->
+            <div class="absolute -bottom-12 -right-8 z-0 opacity-20 text-paw-icon hidden lg:block transform rotate-12">
+                <div class="absolute bottom-0 right-0">
+                    {{ partial "paw.html" (dict "class" "size-paw-icon transform -rotate-12") }}
+                </div>
+                <div class="absolute bottom-16 right-12">
+                    {{ partial "paw.html" (dict "class" "size-paw-icon transform rotate-12") }}
+                </div>
+                <div class="absolute bottom-32 right-4">
+                    {{ partial "paw.html" (dict "class" "size-paw-icon transform -rotate-12") }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

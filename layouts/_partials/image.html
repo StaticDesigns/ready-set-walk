@@ -1,0 +1,19 @@
+{{ $src := .src }}
+{{ $alt := .alt }}
+{{ $class := .class }}
+{{ $size := .size | default "800x webp" }}
+
+{{ $priority := .priority | default "auto" }}
+{{ $loading := .loading | default "lazy" }}
+
+{{ $img := resources.Get $src }}
+
+{{ if $img }}
+{{ $imgWebp := $img.Resize $size }}
+<img src="{{ $imgWebp.RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}" width="{{ $imgWebp.Width }}"
+    height="{{ $imgWebp.Height }}" fetchpriority="{{ $priority }}" loading="{{ $loading }}">
+{{ else }}
+<!-- Fallback: Image not found as resource, try static (relURL) -->
+<img src="{{ $src | relURL }}" alt="{{ $alt }}" class="{{ $class }}" fetchpriority="{{ $priority }}"
+    loading="{{ $loading }}">
+{{ end }}

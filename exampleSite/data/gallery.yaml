@@ -1,0 +1,31 @@
+- name: "Buster"
+  image: "images/gallery/dog1.jpg"
+  alt: "Golden Retriever smiling"
+
+- name: "Luna"
+  image: "images/gallery/dog2.jpg"
+  alt: "Husky looking majestic"
+
+- name: "Charlie"
+  image: "images/gallery/dog3.jpg"
+  alt: "Labrador playing fetch"
+
+- name: "Bella"
+  image: "images/gallery/dog4.jpg"
+  alt: "Poodle posing"
+
+- name: "Rocky"
+  image: "images/gallery/dog5.png"
+  alt: "Golden Retriever running"
+
+- name: "Max"
+  image: "images/gallery/dog6.png"
+  alt: "French Bulldog sitting"
+
+- name: "Cooper"
+  image: "images/gallery/dog7.png"
+  alt: "Border Collie catching frisbee"
+
+- name: "Daisy"
+  image: "images/gallery/dog8.png"
+  alt: "Samoyed in snow"

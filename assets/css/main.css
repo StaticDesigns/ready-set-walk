@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@import "fontawesome.css";
+
+/* 
+  REQUIRED: explicit source paths for Tailwind v4.
+  These allow the theme to self-configure its dependencies (layouts/content)
+  so it works plug-and-play without the user needing to configure their tailwind.config.js.
+  DO NOT REMOVE.
+*/
+@source "../../layouts/**/*.html";
+@source "../../content/**/*.{html,js,md}";
+@source "../../exampleSite/content/**/*.{html,js,md}";
+@source "./main.css";
+/* Scan self for safelist comments */
+
+@theme {
+    --font-heading: 'Nunito', sans-serif;
+    --font-sans: 'Outfit', sans-serif;
+
+    /* Custom colors */
+    --color-paw-icon: #000;
+    /* gray-300 */
+}
+
+@layer base {
+    body {
+        font-family: var(--font-sans);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .font-heading {
+        font-family: var(--font-heading);
+        font-weight: 900;
+    }
+
+    button,
+    .btn {
+        font-family: var(--font-heading);
+        font-weight: 900;
+    }
+}
+
+@layer components {
+    .pricing-price {
+        font-family: var(--font-heading);
+        font-weight: 900;
+    }
+
+    /* Paw Icon Color Configuration */
+    .text-paw-icon {
+        color: var(--color-paw-icon);
+    }
+
+    /* Paw Icon Size Configuration */
+    .size-paw-icon {
+        width: 3rem;
+        /* equivalent to w-12 */
+        height: 3rem;
+    }
+}

@@ -1,0 +1,30 @@
+<section id="gallery" class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center relative">
+        <!-- Decorative Paws Top Right -->
+        <div class="absolute top-0 right-10 z-0 opacity-20 text-paw-icon hidden lg:block transform rotate-12">
+            <div class="absolute top-0 right-0">
+                {{ partial "paw.html" (dict "class" "size-paw-icon transform -rotate-12") }}
+            </div>
+            <div class="absolute top-16 right-12">
+                {{ partial "paw.html" (dict "class" "size-paw-icon transform rotate-12") }}
+            </div>
+            <div class="absolute top-32 right-4">
+                {{ partial "paw.html" (dict "class" "size-paw-icon transform -rotate-12") }}
+            </div>
+        </div>
+        <h2 class="text-3xl lg:text-4xl font-heading font-bold text-blue-900 mb-12 relative z-10 w-fit mx-auto">Happy
+            Paws Gallery</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            {{ range site.Data.gallery }}
+            <div class="relative group overflow-hidden rounded-2xl aspect-square">
+                {{ partial "image.html" (dict "src" .image "alt" .alt "class" "object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-500" "size" "320x webp q75") }}
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-white font-medium">{{ .name }}</span>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

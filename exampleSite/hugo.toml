@@ -1,0 +1,84 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Ready Set Walk'
+theme = 'ready-set-walk'
+themesDir = '../..'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Energetic, reliable dog walking for your neighborhood's happiest pups."
+  googleAnalyticsID = "" # Enter your GA4 Measurement ID (e.g., G-XXXXXXXXXX)
+  
+  [params.hero]
+    layout = "hero2" # Options: "hero", "hero2"
+    title = "Ready, Set, WALK! Your Dog's New Best Friend is Here."
+    subtitle = "Energetic, reliable dog walking for [Your Neighborhood/City]'s happiest pups. Let's burn some energy!"
+    cta_text = "Schedule a Meet & Greet"
+    cta_link = "#contact"
+
+  [params.navbar]
+    sticky = false # Set to false to make the navbar scroll with the page
+
+  [params.about]
+    name = "Maya"
+    title = "Meet {{name}}"
+    content = """Hi, I'm {{name}}! I've grown up surrounded by dogs and have always felt a special connection with them. Combining my love for animals with my passion for staying active and outdoors is a dream come true. Whether it's a brisk jog in the park or a leisurely stroll through the neighborhood, I treat every walk as an adventure. I understand that every dog has their own unique personality and energy level, and I love tailoring our time together to make sure they come home happy, tired, and ready for a nap.<br/><br/>
+
+Reliability and safety are my top priorities. I know that your dog is a member of your family, and I take that responsibility seriously. You can count on me to be punctual, attentive to your dog's needs, and communicative with frequent updates and photos. I'm not just a dog walker; I'm a new best friend for your pup who will give them the love, exercise, and attention they deserve while you're busy."""
+    image = "images/about-me2.png"
+
+  [params.contact]
+    email = "hello@readysetwalk.com"
+    phone = "(555) 123-4567"
+
+  [params.contact.form]
+    provider = "formsubmit" # Options: "formsubmit", "formspree", "netlify"
+    action = "" # For Formspree, enter your Form ID here (e.g., "xmqbonzq")
+
+  [params.social]
+    # Add your username or full URL. Leave empty to hide.
+    instagram = "https://instagram.com"
+    tiktok = "https://tiktok.com"
+    facebook = "https://facebook.com"
+    twitter = "" # X
+    snapchat = ""
+    youtube = ""
+    pinterest = ""
+    linkedin = ""
+    discord = ""
+    whatsapp = ""
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "About Me"
+    url = "#about"
+    weight = 2
+  [[menu.main]]
+    identifier = "services"
+    name = "Services & Rates"
+    url = "#services"
+    weight = 3
+  [[menu.main]]
+    identifier = "gallery"
+    name = "Happy Paws Gallery"
+    url = "#gallery"
+    weight = 4
+  [[menu.main]]
+    identifier = "testimonials"
+    url = "#testimonials"
+    weight = 5
+  [[menu.main]]
+    identifier = "contact"
+    name = "Book a Walk!"
+    url = "#contact"
+    weight = 6

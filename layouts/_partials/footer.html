@@ -1,0 +1,77 @@
+<footer class="bg-blue-600 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+            {{ with site.Params.social.instagram }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-instagram text-2xl"></i>
+                <span class="sr-only">Instagram</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.tiktok }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-tiktok text-2xl"></i>
+                <span class="sr-only">TikTok</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.facebook }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-facebook text-2xl"></i>
+                <span class="sr-only">Facebook</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.twitter }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-x-twitter text-2xl"></i>
+                <span class="sr-only">X (Twitter)</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.snapchat }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-snapchat text-2xl"></i>
+                <span class="sr-only">Snapchat</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.youtube }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-youtube text-2xl"></i>
+                <span class="sr-only">YouTube</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.pinterest }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-pinterest text-2xl"></i>
+                <span class="sr-only">Pinterest</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.linkedin }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-linkedin text-2xl"></i>
+                <span class="sr-only">LinkedIn</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.discord }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-discord text-2xl"></i>
+                <span class="sr-only">Discord</span>
+            </a>
+            {{ end }}
+            {{ with site.Params.social.whatsapp }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer"
+                class="hover:text-yellow-300 transition-colors flex items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                <span class="sr-only">WhatsApp</span>
+            </a>
+            {{ end }}
+        </div>
+        <p>&copy; {{ now.Year }} {{ site.Title }}. All rights reserved.</p>
+    </div>
+</footer>

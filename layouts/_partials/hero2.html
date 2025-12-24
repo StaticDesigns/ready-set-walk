@@ -1,0 +1,24 @@
+<section id="hero" class="relative bg-white min-h-[600px] flex items-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+        {{ partial "image.html" (dict "src" "images/hero-bg-2.png" "alt" "Hero Background" "class" "w-full h-full object-cover object-top" "size" "1920x webp q75" "priority" "high" "loading" "eager") }}
+    </div>
+
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 z-10 bg-gradient-to-r from-white via-white/60 to-transparent"></div>
+
+    <div class="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2 text-center lg:text-left z-10">
+            <h1 class="text-4xl lg:text-5xl font-heading font-bold text-blue-900 mb-6 leading-tight">
+                {{ site.Params.hero.title | safeHTML }}
+            </h1>
+            <p class="text-lg text-gray-700 mb-8 max-w-lg mx-auto lg:mx-0">
+                {{ site.Params.hero.subtitle }}
+            </p>
+            <a href="{{ site.Params.hero.cta_link }}"
+                class="inline-block bg-yellow-400 text-blue-900 font-bold font-heading py-3 px-8 rounded-full shadow-lg hover:bg-yellow-300 hover:shadow-xl transition-all transform hover:-translate-y-1">
+                {{ site.Params.hero.cta_text }}
+            </a>
+        </div>
+    </div>
+</section>

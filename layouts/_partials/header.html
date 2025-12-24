@@ -1,0 +1,38 @@
+<header
+    class="bg-blue-600 text-white {{ if ne site.Params.navbar.sticky false }}sticky top-0{{ else }}relative{{ end }} z-50 shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="{{ site.Home.RelPermalink }}"
+            class="text-2xl font-bold font-heading hover:text-yellow-300 transition-colors">
+            {{ site.Title }}
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 font-medium">
+            {{ range site.Menus.main }}
+            <a href="{{ .URL }}" class="hover:text-yellow-300 transition-colors">{{ .Name }}</a>
+            {{ end }}
+        </nav>
+
+        <!-- Mobile Menu Button (Hamburger) -->
+        <button id="mobile-menu-btn" class="md:hidden focus:outline-none" aria-label="Toggle navigation">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-700 pb-4">
+        {{ range site.Menus.main }}
+        <a href="{{ .URL }}" class="block px-4 py-2 hover:bg-blue-800">{{ .Name }}</a>
+        {{ end }}
+    </div>
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</header>
